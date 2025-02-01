@@ -22,7 +22,7 @@ public class SuccerApp {
 
     public static class AdminModule {
         static boolean selected;
-        static int ShowAdminModule() {
+        static int showAdminModule() {
             selected = true;
             System.out.println("1 - Работа с учетными записями");
             System.out.println("2 - Работа с данными");
@@ -33,7 +33,7 @@ public class SuccerApp {
 
     public static class UserModule {
         static boolean selected;
-        static int ShowUserModule () {
+        static int showUserModule () {
             System.out.println("1 - Работа с данными");
             System.out.println("2 - Инд.задание");
             System.out.println("3 - Поиск");
@@ -45,7 +45,7 @@ public class SuccerApp {
 
     public static class Accounts {
         static boolean selected;
-            static int ShowAccounts(){
+            static int showAccounts(){
                 System.out.println("1 - Просмотр");
                 System.out.println("2 - Добавление");
                 System.out.println("3 - Редактирование");
@@ -59,7 +59,7 @@ public class SuccerApp {
     public static class WorkWithData {
         static boolean selected = false;
 
-        static int ShowWorkWithData(){
+        static int showWorkWithData(){
             System.out.println("1 - Режим редактирования");
             System.out.println("2 - Режим обработки");
             System.out.println("3 - Назад");
@@ -69,7 +69,7 @@ public class SuccerApp {
 
     public static class EditingMode {
         static boolean selected = false;
-        static int ShowEditingMode() {
+        static int showEditingMode() {
             System.out.println("1 - Просмотр");
             System.out.println("2 - Добавление");
             System.out.println("3 - Редактирование");
@@ -81,7 +81,7 @@ public class SuccerApp {
 
     public static class ProcessingMode {
         static boolean selected;
-        static int ShowProcessingMode() {
+        static int showProcessingMode() {
             System.out.println("1 - Индивидуальное задание");
             System.out.println("2 - Поиск");
             System.out.println("3 - Сортировка");
@@ -100,12 +100,12 @@ public class SuccerApp {
                     AdminModule.selected = true;
 
                     while (AdminModule.selected) {
-                        result = AdminModule.ShowAdminModule();
+                        result = AdminModule.showAdminModule();
 
                         if (result == 1) {
                             Accounts.selected = true;
                             while (Accounts.selected) {
-                                result = Accounts.ShowAccounts();
+                                result = Accounts.showAccounts();
 
                                 if (result == 5) {
                                     Accounts.selected = false;
@@ -117,12 +117,12 @@ public class SuccerApp {
                             WorkWithData.selected = true;
 
                             while (WorkWithData.selected) {
-                                result = WorkWithData.ShowWorkWithData();
+                                result = WorkWithData.showWorkWithData();
 
                                 if (result == 1) {
                                     EditingMode.selected = true;
                                     while (EditingMode.selected) {
-                                        result = EditingMode.ShowEditingMode();
+                                        result = EditingMode.showEditingMode();
                                         if (result == 5) {
                                             EditingMode.selected = false;
                                         }
@@ -132,7 +132,7 @@ public class SuccerApp {
                                 if (result == 2) {
                                     ProcessingMode.selected = true;
                                     while (ProcessingMode.selected) {
-                                        result = ProcessingMode.ShowProcessingMode();
+                                        result = ProcessingMode.showProcessingMode();
 
                                         if (result == 4) {
                                             ProcessingMode.selected = false;
@@ -156,7 +156,7 @@ public class SuccerApp {
                         UserModule.selected = true;
 
                         while (UserModule.selected) {
-                            result = UserModule.ShowUserModule();
+                            result = UserModule.showUserModule();
 
                             if (result == 5) {
                                 UserModule.selected = false;
